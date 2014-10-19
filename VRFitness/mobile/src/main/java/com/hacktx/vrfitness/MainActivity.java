@@ -1,7 +1,6 @@
 package com.hacktx.vrfitness;
 
 import android.app.Activity;
-import android.app.ActionBar;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.os.Bundle;
@@ -10,11 +9,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.os.Build;
 
 
-
-public class Home extends Activity {
+public class MainActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +22,8 @@ public class Home extends Activity {
         Fragment fragment = manager.findFragmentById(R.id.container);
 
         //if(fragment == null) {
-            fragment = new
+            fragment = new LoginFragment();
+            manager.beginTransaction().add(R.id.container, fragment).commit();
 
     }
 
@@ -60,7 +58,7 @@ public class Home extends Activity {
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                 Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_home, container, false);
+            View rootView = inflater.inflate(R.layout.main_fragment, container, false);
             return rootView;
         }
     }

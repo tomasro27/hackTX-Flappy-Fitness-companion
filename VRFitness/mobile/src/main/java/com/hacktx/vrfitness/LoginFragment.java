@@ -17,7 +17,7 @@ public class LoginFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup parent,
                              Bundle SavedInstanceState) {
-        View v = inflater.inflate(R.layout.sensor_fragment, parent, false);
+        View v = inflater.inflate(R.layout.main_fragment, parent, false);
 
 
 
