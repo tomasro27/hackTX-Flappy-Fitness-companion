@@ -9,11 +9,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-<<<<<<< HEAD:VRFitness/mobile/src/main/java/com/hacktx/vrfitness/Home.java
-=======
 import com.parse.Parse;
 import com.parse.ParseAnalytics;
->>>>>>> eff5abaed3633686b4576a08fe4654a305681740:VRFitness/mobile/src/main/java/com/hacktx/vrfitness/MainActivity.java
 
 
 public class MainActivity extends Activity {
@@ -28,13 +25,10 @@ public class MainActivity extends Activity {
         FragmentManager manager = getFragmentManager();
         Fragment fragment = manager.findFragmentById(R.id.container);
 
-<<<<<<< HEAD:VRFitness/mobile/src/main/java/com/hacktx/vrfitness/Home.java
-=======
         if(fragment == null) {
             fragment = new LoginFragment();
             manager.beginTransaction().add(R.id.container, fragment).commit();
         }
->>>>>>> eff5abaed3633686b4576a08fe4654a305681740:VRFitness/mobile/src/main/java/com/hacktx/vrfitness/MainActivity.java
 
     }
 

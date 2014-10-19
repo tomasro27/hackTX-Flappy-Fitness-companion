@@ -8,6 +8,10 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
+import com.parse.Parse;
+import com.parse.ParseAnalytics;
+import com.parse.ParseUser;
+import com.parse.SignUpCallback;
 
 /**
  * Created by TR on 10/18/2014.
@@ -20,16 +24,12 @@ public class LoginFragment extends Fragment {
     Button register;
 
     @Override
-    public void onCreate(Bundle savedInstanceState) { super.onCreate(ksavedInstanceState);}
+    public void onCreate(Bundle savedInstanceState) { super.onCreate(savedInstanceState);}
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup parent,
-<<<<<<< HEAD
                              Bundle SavedInstanceState) {
-        View v = inflater.inflate(R.layout.login_fragment, parent, false);
-=======
-                             Bundle SavedInstanceState)
-    {
+
         View v = inflater.inflate(R.layout.login_fragment, parent, false);
 
         username = (EditText) v.findViewById(R.id.username);
@@ -41,7 +41,23 @@ public class LoginFragment extends Fragment {
             @Override
             public void onClick(View v)
             {
-
+//                ParseUser user = new ParseUser();
+//                user.setUsername("");
+//                user.setPassword("my pass");
+//
+//// other fields can be set just like with ParseObject
+//                user.put("phone", "650-555-0000");
+//
+//                user.signUpInBackground(new SignUpCallback() {
+//                    public void done(ParseException e) {
+//                        if (e == null) {
+//                            // Hooray! Let them use the app now.
+//                        } else {
+//                            // Sign up didn't succeed. Look at the ParseException
+//                            // to figure out what went wrong
+//                        }
+//                    }
+//                });
             }
 
         });
@@ -58,7 +74,6 @@ public class LoginFragment extends Fragment {
 
         
 
->>>>>>> eff5abaed3633686b4576a08fe4654a305681740
 
 
 
