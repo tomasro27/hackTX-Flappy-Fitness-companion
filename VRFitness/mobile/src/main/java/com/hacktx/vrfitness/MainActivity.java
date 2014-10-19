@@ -9,6 +9,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import com.parse.Parse;
+import com.parse.ParseAnalytics;
 
 
 public class MainActivity extends Activity {
@@ -18,12 +20,15 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
+        Parse.initialize(this, "6vrJyNw2yXC9lXa86z0zqP3w7rcqcY6NmogzZjw1", "YF1txyQ3vHGUaFm1SMkaFWsvgjST9MpruqcxmemO");
+
         FragmentManager manager = getFragmentManager();
         Fragment fragment = manager.findFragmentById(R.id.container);
 
-        //if(fragment == null) {
+        if(fragment == null) {
             fragment = new LoginFragment();
             manager.beginTransaction().add(R.id.container, fragment).commit();
+        }
 
     }
 
