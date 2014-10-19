@@ -9,19 +9,32 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+<<<<<<< HEAD:VRFitness/mobile/src/main/java/com/hacktx/vrfitness/Home.java
+=======
+import com.parse.Parse;
+import com.parse.ParseAnalytics;
+>>>>>>> eff5abaed3633686b4576a08fe4654a305681740:VRFitness/mobile/src/main/java/com/hacktx/vrfitness/MainActivity.java
 
 
-
-public class Home extends Activity {
+public class MainActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
+        Parse.initialize(this, "6vrJyNw2yXC9lXa86z0zqP3w7rcqcY6NmogzZjw1", "YF1txyQ3vHGUaFm1SMkaFWsvgjST9MpruqcxmemO");
+
         FragmentManager manager = getFragmentManager();
         Fragment fragment = manager.findFragmentById(R.id.container);
 
+<<<<<<< HEAD:VRFitness/mobile/src/main/java/com/hacktx/vrfitness/Home.java
+=======
+        if(fragment == null) {
+            fragment = new LoginFragment();
+            manager.beginTransaction().add(R.id.container, fragment).commit();
+        }
+>>>>>>> eff5abaed3633686b4576a08fe4654a305681740:VRFitness/mobile/src/main/java/com/hacktx/vrfitness/MainActivity.java
 
     }
 
@@ -56,7 +69,7 @@ public class Home extends Activity {
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                 Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_home, container, false);
+            View rootView = inflater.inflate(R.layout.main_fragment, container, false);
             return rootView;
         }
     }
