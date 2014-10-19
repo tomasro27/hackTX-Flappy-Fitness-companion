@@ -12,12 +12,12 @@ import android.view.ViewGroup;
 public class LoginFragment extends Fragment {
 
     @Override
-    public void onCreate(Bundle ksavedInstanceState) { super.onCreate(ksavedInstanceState);}
+    public void onCreate(Bundle savedInstanceState) { super.onCreate(ksavedInstanceState);}
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup parent,
                              Bundle SavedInstanceState) {
-        View v = inflater.inflate(R.layout.sensor_fragment, parent, false);
+        View v = inflater.inflate(R.layout.login_fragment, parent, false);
 
 
 
