@@ -15,9 +15,9 @@
             android:textSize="30dp"
             android:fontFamily="RobotoLight"
             android:layout_margin="15dp"
-            android:text="Username"
+            android:text="Calories"
             android:layout_alignParentTop="true"
-            android:id="@+id/username"
+            android:id="@+id/calories"
             android:textStyle="bold"
             android:layout_alignParentLeft="true"
             />
@@ -34,13 +34,14 @@
             android:text="Score"
             android:layout_alignParentTop="true"
             android:layout_alignParentRight="true"
+            android:layout_below="@+id/title"
             android:id="@+id/Score"
             android:textStyle="bold"
             />
 
         <ListView
-            android:id="@+id/scoreList"
-            android:layout_below="@id/username"
+            android:id="@+id/historyList"
+            android:layout_below="@id/calories"
             android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />

@@ -5,18 +5,27 @@
 
     <TextView
         android:id="@+id/username"
-        android:textSize="25dp"
+        android:layout_margin="10dp"
+        android:gravity="center_vertical"
+        android:layout_centerVertical="true"
+        android:textSize="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="RobotoLight"
         android:text="username"/>
 
     <TextView
         android:id="@+id/number"
-        android:layout_below="@id/username"
+        android:layout_toRightOf="@id/username"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
-        android:textSize="50dp"
+        android:gravity="right"
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp"
+        android:textSize="20dp"
+        android:layout_centerVertical="true"
+        android:fontFamily="RobotoLight"
         android:text="00"/>
 
 
